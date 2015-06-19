@@ -1,3 +1,14 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 
 /**
@@ -432,6 +443,11 @@ Navigation Section
 
 .top-nav {
   background-color: #fff;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  border-bottom: 1px solid #ddd;
+  z-index: 9999;
 }
 
 .top-nav > .content {
@@ -440,48 +456,128 @@ Navigation Section
   margin: 0 auto;
   padding: 0px 15px;
 }
+.content {
+  padding: 0 0.938rem;
+  min-width: 36.5rem;
+}
 
-.top-nav, .links {
+.top-nav .links {
     float: right;
     font-family: 'Roboto', sans-serif;
-    color: #838994;
     font-size: 16px;
-    margin-top: 25px;
+    color: #838994;
+    letter-spacing: 0.03em;
+    margin-top: 1.7rem;
     -webkit-font-smoothing: antialiased;
 }
-.top-nav, .links li {
+.top-nav .links li {
     display: inline-block;
     margin-left: 25px;
-    margin-right: 3em;
-    padding: 0;
 }
-.top-nav, .links, .active {
+
+.top-nav .logo {
+  height: 4.375rem;
+  width: 26px 70px;
+}
+
+.top-nav .links .active {
     color: #4c5058;
     font-weight: 500;
 }
-.top-nav, .links li:hover {
+.top-nav .links li:hover {
     cursor: pointer;
     color: #333333;
 }
 
+/***********************
+MIDDLE SECTION
+***********************/
+
 .introduction {
   background-image: url('../images/first-background copy.jpg');
-  background-position: 0 bottom;
+  background-position: center bottom;
   background-repeat: no-repeat;
   background-size: cover;
   height: 45.938rem;
+  overflow: auto;
 }
+
+.introduction h1 {
+  margin-top: 17.5rem;
+  font-size: 3.125rem;
+}
+
+.introduction h1, .introduction h3 {
+  color: white;
+  text-align: center;
+  font-weight: 300;
+}
+
+.introduction h3 {
+  margin-top: 1.25rem;
+  font-size: 1.563rem;
+}
+
+/*********************
+BUTTONS
+**********************/
 
 .big-button {
   margin: 0 auto;
-  text-shadow: none;
   border-style: none;
   border-radius: 4px;
-  padding: 16px 26px;
+  padding: 1rem 1.5rem;
   line-height: 1.33;
-  width: 300;
-  background-color: orange;
-  font-size: 2em;
-  color: black;
+  width: 9.688rem;
+  background-color: #f15a29;
+  border-color: #f15a29;
+  font-size: 1.125rem;
+  color: white;
   display: block;
 }
+
+/*********************
+ICONS
+*********************/
+
+/*.cases .devices {
+  width: 33.3333333%;
+  float: left;
+  display: inline-block;
+  box-sizing: border-box;
+  height: 4em;
+}*/
+
+.cases {
+  background-color: #fff;
+  overflow: hidden;
+  padding-bottom: 5rem;
+
+}
+
+.cases .content {
+  margin-top: 7.875rem;
+  padding: none;
+  color: #1d1e21;
+  text-align: center;
+}
+
+.cases h2 {
+  font-size: 2.75rem;
+  margin: 1.625rem 0 3.125rem;
+  font-weight: 300;
+}
+
+.cases .devices > li {
+  width: 33.3333333%;
+  float: left;
+  display: inline-block;
+  box-sizing: border-box;
+}
+
+.cases .devices h3 {
+  font-weight: 400;
+  font-size: 1.563rem;
+  margin: 2.5rem 0px 1.875rem;
+}
+
